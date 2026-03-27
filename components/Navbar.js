@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,13 +14,13 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/8 bg-black/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--gold)]/40 bg-[linear-gradient(135deg,rgba(212,175,55,0.24),rgba(39,176,125,0.18))] text-lg font-bold text-white">
-            E
+          <div className="relative h-14 w-14 overflow-hidden rounded-full border border-[color:var(--gold)]/35 bg-black/40 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <Image src="/ecconnex-logo.png" alt="Ecconnex logo" fill className="object-cover object-center" sizes="56px" />
           </div>
           <div>
-            <div className="text-lg font-semibold tracking-[0.18em] text-white uppercase">Ecconnex</div>
-            <div className="text-xs tracking-[0.28em] text-[color:var(--muted)] uppercase">
-              Sell Fast. Invest Smart.
+            <div className="text-lg font-semibold tracking-[0.2em] text-[color:var(--gold-soft)] uppercase">Ecconnex</div>
+            <div className="text-xs tracking-[0.26em] text-[color:var(--green-soft)] uppercase">
+              Rooted in Fast Solutions
             </div>
           </div>
         </Link>

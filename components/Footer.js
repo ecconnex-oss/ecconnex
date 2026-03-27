@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "@/data/site";
 
@@ -6,7 +7,15 @@ export function Footer() {
     <footer className="border-t border-white/8 bg-black/75">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-12">
         <div className="max-w-md">
-          <div className="text-lg font-semibold tracking-[0.18em] uppercase text-white">Ecconnex</div>
+          <div className="flex items-center gap-4">
+            <div className="relative h-16 w-16 overflow-hidden rounded-full border border-[color:var(--gold)]/35 bg-black/40">
+              <Image src="/ecconnex-logo.png" alt="Ecconnex logo" fill className="object-cover object-center" sizes="64px" />
+            </div>
+            <div>
+              <div className="text-lg font-semibold tracking-[0.18em] uppercase text-[color:var(--gold-soft)]">Ecconnex</div>
+              <div className="text-xs tracking-[0.26em] uppercase text-[color:var(--green-soft)]">Sell Fast. Invest Smart.</div>
+            </div>
+          </div>
           <p className="mt-4 text-sm leading-7 text-[color:var(--muted)]">
             We help motivated homeowners sell without repairs, delays, or fees while giving investors access to
             well-vetted off-market opportunities.

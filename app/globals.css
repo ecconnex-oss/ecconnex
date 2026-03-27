@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
+  --background: #040404;
   --surface: rgba(16, 16, 16, 0.88);
   --surface-strong: rgba(24, 24, 24, 0.95);
-  --foreground: #f7f5ef;
-  --muted: #b5b0a5;
+  --foreground: #f7f1e4;
+  --muted: #c4b69f;
   --line: rgba(255, 255, 255, 0.08);
-  --gold: #d4af37;
-  --gold-soft: #f3d98a;
-  --green: #0f7b58;
-  --green-soft: #27b07d;
-  --shadow: 0 25px 80px rgba(0, 0, 0, 0.38);
+  --gold: #c79b63;
+  --gold-soft: #e0bf8f;
+  --green: #1d7253;
+  --green-soft: #58a77f;
+  --shadow: 0 25px 80px rgba(0, 0, 0, 0.44);
   --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
 }
@@ -28,10 +28,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(212, 175, 55, 0.14), transparent 28%),
-    radial-gradient(circle at top right, rgba(39, 176, 125, 0.12), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(39, 176, 125, 0.09), transparent 24%),
-    linear-gradient(180deg, #0c0c0c 0%, #050505 45%, #090909 100%);
+    radial-gradient(circle at top left, rgba(199, 155, 99, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(29, 114, 83, 0.14), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(88, 167, 127, 0.1), transparent 24%),
+    linear-gradient(180deg, #101010 0%, #050505 45%, #090909 100%);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
@@ -42,7 +42,7 @@ a {
 }
 
 ::selection {
-  background: rgba(212, 175, 55, 0.35);
+  background: rgba(199, 155, 99, 0.35);
   color: #fff;
 }
 
@@ -77,7 +77,7 @@ a {
 }
 
 .surface-card {
-  background: linear-gradient(180deg, rgba(26, 26, 26, 0.95), rgba(12, 12, 12, 0.92));
+  background: linear-gradient(180deg, rgba(30, 30, 30, 0.96), rgba(11, 11, 11, 0.94));
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
@@ -85,8 +85,8 @@ a {
 
 .gold-ring {
   box-shadow:
-    0 0 0 1px rgba(212, 175, 55, 0.25),
-    0 18px 50px rgba(212, 175, 55, 0.12);
+    0 0 0 1px rgba(199, 155, 99, 0.3),
+    0 18px 50px rgba(199, 155, 99, 0.14);
 }
 
 input::placeholder,
