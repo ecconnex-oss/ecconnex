@@ -1,0 +1,86 @@
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { SectionHeading } from "@/components/SectionHeading";
+import { testimonials } from "@/data/site";
+
+export const metadata = {
+  title: "About",
+  description:
+    "Learn about the Ecconnex mission, our approach to helping sellers, and how we serve investors with professionalism and urgency."
+};
+
+export default function AboutPage() {
+  return (
+    <>
+      <AnimatedSection className="section-padding">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.9fr]">
+          <div>
+            <SectionHeading
+              eyebrow="Our Mission"
+              title="Create better outcomes for sellers under pressure and investors moving decisively."
+              copy="Ecconnex was built around a simple idea: distressed property situations need a calm, professional solution, and serious investors need a more reliable source of off-market opportunities. We combine direct communication, disciplined underwriting, and a service mindset that puts trust first."
+            />
+            <div className="mt-10 space-y-6 text-base leading-8 text-[color:var(--muted)]">
+              <p>
+                For homeowners, that means straightforward cash offers, flexible closings, and zero pressure to repair,
+                clean, or list a property they no longer want.
+              </p>
+              <p>
+                For investors, it means access to opportunities presented with enough context to make decisions quickly:
+                neighborhood signals, pricing logic, and realistic value-add potential.
+              </p>
+              <p>
+                We believe credibility is built through consistency. That is why our process prioritizes responsiveness,
+                transparent expectations, and follow-through from first call to closing table.
+              </p>
+            </div>
+          </div>
+
+          <div className="surface-card rounded-[2rem] p-8">
+            <div className="text-xs tracking-[0.24em] text-[color:var(--gold-soft)] uppercase">What We Stand For</div>
+            <div className="mt-6 space-y-5">
+              <div className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5">
+                <h3 className="text-xl font-semibold text-white">Responsiveness</h3>
+                <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">
+                  We move quickly because sellers and investors both lose time when communication stalls.
+                </p>
+              </div>
+              <div className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5">
+                <h3 className="text-xl font-semibold text-white">Clarity</h3>
+                <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">
+                  We explain offers, timelines, and deal assumptions in plain language so decisions are easier to make.
+                </p>
+              </div>
+              <div className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5">
+                <h3 className="text-xl font-semibold text-white">Professionalism</h3>
+                <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">
+                  Every interaction should feel like working with a serious, trustworthy business that values reputation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="section-padding">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            eyebrow="Reputation"
+            title="Relationships matter more than one transaction."
+            copy="Our best growth comes from repeat investors and referrals from sellers who felt taken care of during stressful situations."
+            align="center"
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {testimonials.map((item) => (
+              <div key={item.name} className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
+                <p className="text-base leading-7 text-white/90">{item.quote}</p>
+                <div className="mt-6 text-sm text-[color:var(--muted)]">
+                  {item.name} • {item.role}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
+    </>
+  );
+}
