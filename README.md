@@ -32,6 +32,9 @@ Configure one shared webhook or separate seller/contact webhooks in `.env.local`
 LEAD_WEBHOOK_URL=
 SELLER_LEAD_WEBHOOK_URL=
 CONTACT_LEAD_WEBHOOK_URL=
+LEAD_RECIPIENT_EMAIL=ecconnex@gmail.com
+GMAIL_USER=ecconnex@gmail.com
+GMAIL_APP_PASSWORD=
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
 
@@ -41,6 +44,8 @@ Notes:
 - `SELLER_LEAD_WEBHOOK_URL` only receives `/api/offer` submissions.
 - `CONTACT_LEAD_WEBHOOK_URL` only receives `/api/contact` submissions.
 - Multiple webhook URLs can be provided as a comma-separated list.
+- If `GMAIL_APP_PASSWORD` is set, both forms will also send an email to `LEAD_RECIPIENT_EMAIL`.
+- For Gmail, use a Google App Password instead of your normal account password.
 
 Payloads include `leadType`, `receivedAt`, and `source`.
 

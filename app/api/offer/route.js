@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { forwardLead } from "@/lib/lead-routing";
+import { sendLeadEmail } from "@/lib/mailer";
 
 export async function POST(request) {
   const body = await request.json();
@@ -10,13 +11,19 @@ export async function POST(request) {
   }
 
   try {
-    await forwardLead({
-      type: "offer",
-      payload: { name, phone, propertyAddress }
-    });
+    await Promise.all([
+      forwardLead({
+        type: "offer",
+        payload: { name, phone, propertyAddress }
+      }),
+      sendLeadEmail({
+        type: "offer",
+        payload: { name, phone, propertyAddress }
+      })
+    ]);
   } catch (error) {
     return NextResponse.json(
-      { message: "Your request was received, but lead delivery failed. Please verify webhook settings." },
+      { message: "Your request was received, but lead delivery failed. Please verify email or webhook settings." },
       { status: 500 }
     );
   }

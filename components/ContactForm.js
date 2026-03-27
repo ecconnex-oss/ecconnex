@@ -85,7 +85,7 @@ export function ContactForm() {
         <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5">
           <div className="text-sm font-semibold text-white">Direct Contact</div>
           <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">
-            Email: hello@ecconnex.com
+            Email: ecconnex@gmail.com
             <br />
             Phone: (555) 214-8800
           </p>

@@ -27,7 +27,7 @@ export function Footer() {
         <div>
           <div className="text-sm font-semibold tracking-[0.2em] uppercase text-white">Contact</div>
           <div className="mt-4 space-y-3 text-sm text-[color:var(--muted)]">
-            <p>hello@ecconnex.com</p>
+            <p>ecconnex@gmail.com</p>
             <p>(555) 214-8800</p>
             <p>Available seven days a week for property inquiries and buyer list requests.</p>
           </div>
