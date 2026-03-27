@@ -8,6 +8,24 @@ export const metadata = {
     "Learn about the Ecconnex mission, our approach to helping sellers, and how we serve investors with professionalism and urgency."
 };
 
+const teamValues = [
+  {
+    title: "Built on real trust",
+    description:
+      "Ecconnex is a three-person operation built by friends who have known each other since high school and still work side by side today."
+  },
+  {
+    title: "Grounded in real life",
+    description:
+      "We know that sellers are often dealing with pressure, uncertainty, or a property that has become emotionally and financially draining."
+  },
+  {
+    title: "Hands-on from start to finish",
+    description:
+      "You are not getting passed into a giant system. The same small team that answers your questions is the team working the deal."
+  }
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -21,12 +39,14 @@ export default function AboutPage() {
             />
             <div className="mt-10 space-y-6 text-base leading-8 text-[color:var(--muted)]">
               <p>
-                For homeowners, that means straightforward cash offers, flexible closings, and zero pressure to repair,
-                clean, or list a property they no longer want.
+                We are a small team, and that is intentional. Ecconnex was built by three longtime friends who have
+                been through enough life to understand that people usually call a company like ours because they want
+                clarity, speed, and a straight answer.
               </p>
               <p>
-                For investors, it means access to opportunities presented with enough context to make decisions quickly:
-                neighborhood signals, pricing logic, and realistic value-add potential.
+                For homeowners, that means straightforward cash offers, flexible closings, and zero pressure to repair,
+                clean, or list a property they no longer want. For investors, it means access to opportunities presented
+                with enough context to make decisions quickly.
               </p>
               <p>
                 We believe credibility is built through consistency. That is why our process prioritizes responsiveness,
@@ -36,26 +56,14 @@ export default function AboutPage() {
           </div>
 
           <div className="surface-card rounded-[2rem] p-8">
-            <div className="text-xs tracking-[0.24em] text-[color:var(--gold-soft)] uppercase">What We Stand For</div>
+            <div className="text-xs tracking-[0.24em] text-[color:var(--gold-soft)] uppercase">How We Work</div>
             <div className="mt-6 space-y-5">
-              <div className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5">
-                <h3 className="text-xl font-semibold text-white">Responsiveness</h3>
-                <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">
-                  We move quickly because sellers and investors both lose time when communication stalls.
-                </p>
-              </div>
-              <div className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5">
-                <h3 className="text-xl font-semibold text-white">Clarity</h3>
-                <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">
-                  We explain offers, timelines, and deal assumptions in plain language so decisions are easier to make.
-                </p>
-              </div>
-              <div className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5">
-                <h3 className="text-xl font-semibold text-white">Professionalism</h3>
-                <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">
-                  Every interaction should feel like working with a serious, trustworthy business that values reputation.
-                </p>
-              </div>
+              {teamValues.map((item) => (
+                <div key={item.title} className="rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5">
+                  <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
